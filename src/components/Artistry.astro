@@ -1,0 +1,28 @@
+---
+import artistry1 from '../assets/artistry-1.jpg';
+import artistry2 from '../assets/artistry-2.jpg';
+---
+
+<section id="artistry" class="px-5 py-4">
+  <main class="space-y-6">
+    <img src={artistry1.src} alt="Programming laptop on a desk" />
+    <h2 class="text-4xl uppercase">
+      <span class="block">The Art</span>That I Do
+    </h2>
+    <p>
+      I specialize in developing web applications that harmonize
+      state-of-the-art coding techniques with timeless web development
+      principles, creating digital solutions that seamlessly marry innovation
+      with reliability and user-friendly design.
+    </p>
+    <img class="portrait-image" src={artistry2.src} alt="Programming laptop on a desk" />
+  </main>
+</section>
+
+<style scoped>
+  .portrait-image {
+    max-width: 200px;
+    height: auto;
+    margin-left: auto;
+  }
+</style>
