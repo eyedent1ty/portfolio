@@ -3,26 +3,32 @@ import artistry1 from '../assets/artistry-1.jpg';
 import artistry2 from '../assets/artistry-2.jpg';
 ---
 
-<section id="artistry" class="px-5 py-4">
-  <main class="space-y-6">
-    <img src={artistry1.src} alt="Programming laptop on a desk" />
-    <h2 class="text-4xl uppercase">
-      <span class="block">The Art</span>That I Do
-    </h2>
-    <p class="text-sm">
-      I specialize in developing web applications that harmonize
-      state-of-the-art coding techniques with timeless web development
-      principles, creating digital solutions that seamlessly marry innovation
-      with reliability and user-friendly design.
-    </p>
-    <img class="portrait-image" src={artistry2.src} alt="Programming laptop on a desk" />
+<section id="artistry" class="px-5 py-4 md:h-screen">
+  <main class="space-y-6 md:flex md:flex-row md:justify-between md:items-center md:h-full">
+    <div class="md:w-5/12 md:h-4/5 md:flex md:flex-col md:gap-y-8 lg:gap-y-12 xl:gap-y-16 2xl:gap-y-20">
+      <img
+        src={artistry1.src}
+        alt="Programming laptop on a desk"
+      />
+      <h2
+        class="text-3xl uppercase mt-10 md:mt-0 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
+      >
+        <span class="block">The Art</span>That I Do
+      </h2>
+    </div>
+
+    <div class="h-full md:w-5/12 md:flex md:flex-col md:gap-y-10">
+      <p class="text-sm mb-10 md:mb-10 sm:text-base md:text-lg lg:text-xl xl:text-2xl  2xl:text-3xl">
+        I specialize in developing web applications that harmonize
+        state-of-the-art coding techniques with timeless web development
+        principles, creating digital solutions that seamlessly marry innovation
+        with reliability and user-friendly design.
+      </p>
+      <img
+        class="max-w-60 mx-auto sm:max-w-none sm:ml-auto sm:w-52 md:w-62 lg:w-72 xl:w-82 2xl:w-92"
+        src={artistry2.src}
+        alt="Programming laptop on a desk"
+      />
+    </div>
   </main>
 </section>
-
-<style scoped>
-  .portrait-image {
-    max-width: 200px;
-    height: auto;
-    margin-left: auto;
-  }
-</style>
