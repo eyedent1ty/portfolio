@@ -2,20 +2,36 @@
 import myProfile from '../assets/my-profile.jpg';
 ---
 
-<section id="header" class="px-5 py-14">
-  <main class="relative">
-    <span id="my-name" class="absolute italic left-0 top-0 -translate-y-3 -translate-x-40 transition-transform ease-out duration-1000">John Daniel</span>
+<section id="header" class="px-5 py-14 lg:h-screen">
+  <main class="relative h-full">
+    <span
+      id="my-name"
+      class="absolute italic left-0 top-0 -translate-y-3 -translate-x-40 transition-transform ease-out duration-1000 sm:text-lg md:text-xl xl:text-2xl 2xl:text-3xl"
+      >John Daniel</span
+    >
     <figure>
       <figcaption>
-        <h1 id="my-vision" class="text-5xl text-center translate-y-18 opacity-0 transition-all ease-out duration-1000 z-50">
-          <span class="uppercase">Aspirer</span>
-          <span class="uppercase">Dreamer</span>
-          <span class="uppercase">Developer</span>
+        <h1
+          id="my-vision"
+          class="text-4xl text-center translate-y-18 opacity-0 transition-all ease-out duration-1000 z-50 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:9xl"
+        >
+          <span class="uppercase block">Aspirer</span>
+          <span class="uppercase block">Dreamer</span>
+          <span class="uppercase block">Developer</span>
         </h1>
       </figcaption>
-      <img id="my-picture" class="h-40 mx-auto opacity-0 transition-opacity duration-400 -z-0" src={myProfile.src} alt="Picture of myself smiling" />
+      <img
+        id="my-picture"
+        class="h-40 mx-auto opacity-0 transition-opacity duration-400 -z-0 sm:h-52 md:h-62 lg:h-72 xl:h-82 2xl:h-92"
+        src={myProfile.src}
+        alt="Picture of myself smiling"
+      />
     </figure>
-    <span id="my-role" class="absolute right-0 bottom-0 translate-y-10 translate-x-40 transition-transform ease-out duration-1000">Developer</span>
+    <span
+      id="my-role"
+      class="absolute right-0 bottom-0 translate-y-10 translate-x-40 transition-transform ease-out duration-1000 sm:text-lg md:text-xl  lg:right-0 lg:top-0 lg:-translate-y-3 xl:text-2xl 2xl:text-3xl"
+      >Developer</span
+    >
   </main>
   <script>
     const myName = document.getElementById('my-name');
