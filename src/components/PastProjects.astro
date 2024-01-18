@@ -6,7 +6,8 @@ import artistry2 from '../assets/artistry-2.jpg';
 <section id="past-projects" class="px-5 py-4">
   <main class="space-y-6">
     <h2
-      class="text-3xl uppercase md:mb-10 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
+      id="past-projects-title"
+      class="text-3xl uppercase -translate-x-full transition-translate duration-1000 md:mb-10 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
     >
       My past projects
     </h2>
@@ -14,7 +15,7 @@ import artistry2 from '../assets/artistry-2.jpg';
     <section
       class="text-sm sm:flex sm:flex-row sm:justify-center sm:gap-10 sm:px-20 sm:flex-wrap md:flex-nowrap md:justify-between"
     >
-      <figure class="space-y-4 sm:w-5/12 lg:w-auto">
+      <figure id="past-project-1" class="space-y-4 opacity-0 -translate-x-full transition-translate duration-1000 sm:w-5/12 lg:w-auto">
         <figcaption class="text-center italic">
           Sunnyside agencly landing page (frontendmentor)
         </figcaption>
@@ -28,7 +29,7 @@ import artistry2 from '../assets/artistry-2.jpg';
         </figcaption>
       </figure>
 
-      <figure class="space-y-4 sm:w-5/12 lg:w-auto">
+      <figure id="past-project-2" class="space-y-4 opacity-0  -translate-x-full transition-translate duration-2000 sm:w-5/12 lg:w-auto">
         <figcaption class="text-center italic">Quote Generator</figcaption>
         <img src={artistry2.src} />
         <figcaption
@@ -38,7 +39,7 @@ import artistry2 from '../assets/artistry-2.jpg';
           trip and travel informaion efficiently.
         </figcaption>
       </figure>
-      <figure class="space-y-4 sm:w-5/12 lg:w-auto">
+      <figure id="past-project-3" class="space-y-4 opacity-0  -translate-x-full transition-translate duration-3000 sm:w-5/12 lg:w-auto">
         <figcaption class="text-center italic">Advice Generator App</figcaption>
         <img src={artistry1.src} />
         <figcaption
@@ -50,4 +51,57 @@ import artistry2 from '../assets/artistry-2.jpg';
       </figure>
     </section>
   </main>
+  <script>
+    const pastProjectsTitle = document.getElementById('past-projects-title');
+    const pastProject1 = document.getElementById('past-project-1');
+    const pastProject2 = document.getElementById('past-project-2');
+    const pastProject3 = document.getElementById('past-project-3');
+
+    const hiddenElements = [
+      pastProjectsTitle,
+      pastProject1,
+      pastProject2,
+      pastProject3
+    ];
+
+    const intersectionObsever = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          pastProjectsTitle.classList.remove('-translate-x-full');
+          pastProject1.classList.remove('-translate-x-full');
+          pastProject1.classList.remove('opacity-0');
+
+          pastProject2.classList.remove('-translate-x-full');
+          pastProject2.classList.remove('opacity-0');
+
+          pastProject3.classList.remove('-translate-x-full');
+          pastProject3.classList.remove('opacity-0');
+        } else {
+          pastProjectsTitle.classList.add('-translate-x-full');
+          pastProject1.classList.add('-translate-x-full');
+          pastProject1.classList.add('opacity-0');
+
+          pastProject2.classList.add('-translate-x-full');
+          pastProject2.classList.add('opacity-0');
+
+          pastProject3.classList.add('-translate-x-full');
+          pastProject3.classList.add('opacity-0');
+        }
+      });
+    });
+
+    hiddenElements.forEach((hiddenElement) =>
+      intersectionObsever.observe(hiddenElement)
+    );
+  </script>
 </section>
+
+<style scoped>
+  .duration-2000 {
+    transition-duration: 2000ms;
+  }
+
+  .duration-3000 {
+    transition-duration: 3000ms;
+  }
+</style>

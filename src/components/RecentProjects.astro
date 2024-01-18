@@ -4,56 +4,86 @@ import artistry2 from '../assets/artistry-2.jpg';
 ---
 
 <section id="recent-projects" class="md:min-h-screen">
-  <main class="space-y-12 h-full gap-10 px-10 md:flex md:justify-between md:items-center">
+  <main
+    class="space-y-12 h-full gap-10 px-10 md:flex md:justify-between md:items-center"
+  >
     <div>
       <h2
-        class="text-3xl uppercase md:mb-10 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
+        id="recent-projects-title"
+        class="text-3xl uppercase -translate-x-full transition-translate duration-1000 md:mb-10 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
       >
         <span class="md:block">My most</span>
         <span class="md:block">recent</span>
         <span class="md:block">project</span>
       </h2>
       <p
-        class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+        id="recent-projects-sub-title"
+        class="text-sm -translate-x-full transition-translate- duration-2000 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
       >
         Brand and Marketing Design
       </p>
     </div>
-    <div class="text-sm mx-auto md:max-w-96">
+    <div
+      id="recent-project-1"
+      class="text-sm mx-auto -translate-y-full transition-translate duration-1000 md:max-w-96"
+    >
       <figure class="space-y-4">
-        <figcaption class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg">
+        <figcaption
+          class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg"
+        >
           Landing page for Ro-ed Logistics and Services
         </figcaption>
-        <img src={artistry2.src} class="max-w-72 mx-auto md:max-h-64 lg:max-h-96" />
-        <figcaption class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg">
+        <img
+          src={artistry2.src}
+          class="max-w-72 mx-auto md:max-h-64 lg:max-h-96"
+        />
+        <figcaption
+          class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg"
+        >
           Developed a responsive landing page that seamlessly adapts to various
           screen sizes and devices, ensuring an optimal user experience.
         </figcaption>
       </figure>
     </div>
 
-    <div class="space-y-12 mx-auto md:max-w-96 md:mx-0 md:flex md:flex-col md:gap-12">
-      <div class="text-sm">
+    <div
+      class="space-y-12 mx-auto md:max-w-96 md:mx-0 md:flex md:flex-col md:gap-12"
+    >
+      <div
+        id="recent-project-2"
+        class="text-sm translate-x-full transition-translate duration-1000"
+      >
         <figure class="space-y-4">
-          <figcaption class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg">
+          <figcaption
+            class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg"
+          >
             Trucking Management System for Ro-Ed Logistics and Services
           </figcaption>
           <img src={artistry1.src} />
-          <figcaption class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg">
+          <figcaption
+            class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg"
+          >
             Developed a user-friendly management system that can manage and
             secure trip and travel informaion efficiently.
           </figcaption>
         </figure>
       </div>
 
-      <div class="text-sm">
+      <div
+        id="recent-project-3"
+        class="text-sm translate-x-full transition-translate duration-1000"
+      >
         <figure class="space-y-4">
-          <figcaption class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg">
+          <figcaption
+            class="text-center italic sm:text-xs md:text-sm lg:text-base xl:text-lg"
+          >
             Simultaneous Data Compression for faster encoding and decoding using
             Huffman Algorithm
           </figcaption>
           <img src={artistry1.src} />
-          <figcaption class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg">
+          <figcaption
+            class="text-justify sm:text-xs md:text-sm lg:text-base xl:text-lg"
+          >
             Developed a user-friendly data compression system that provides
             efficient compression ratio and compression speed in regards with
             the time and speed of both compression and decompression.
@@ -62,4 +92,55 @@ import artistry2 from '../assets/artistry-2.jpg';
       </div>
     </div>
   </main>
+  <script>
+    const recentProjectsTitle = document.getElementById(
+      'recent-projects-title'
+    );
+    const recentProjectsSubtitle = document.getElementById(
+      'recent-projects-sub-title'
+    );
+    const recentProject1 = document.getElementById('recent-project-1');
+    const recentProject2 = document.getElementById('recent-project-2');
+    const recentProject3 = document.getElementById('recent-project-3');
+
+    const hiddenElements = [
+      recentProjectsTitle,
+      recentProjectsSubtitle,
+      recentProject1,
+      recentProject2,
+      recentProject3
+    ];
+
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          recentProjectsTitle.classList.remove('-translate-x-full');
+          recentProjectsSubtitle.classList.remove('-translate-x-full');
+          recentProject1.classList.remove('-translate-y-full');
+          recentProject2.classList.remove('translate-x-full')
+          recentProject3.classList.remove('translate-x-full');
+        } else {
+          recentProjectsTitle.classList.add('-translate-x-full');
+          recentProjectsSubtitle.classList.add('-translate-x-full');
+          recentProject1.classList.add('-translate-y-full');
+          recentProject2.classList.add('translate-x-full')
+          recentProject3.classList.add('translate-x-full');
+        }
+      });
+    });
+
+    hiddenElements.forEach((hiddenElement) =>
+      intersectionObserver.observe(hiddenElement)
+    );
+  </script>
 </section>
+
+<style scoped>
+  .duration-2000 {
+    transition-duration: 2000ms;
+  }
+
+  #recent-project-2, #recent-project-3 {
+    overflow-x: hidden;
+  }
+</style>
