@@ -17,26 +17,7 @@ import simultaneousDataCompression from '../assets/simultaneous-data-compression
         <span class="md:block">recent</span>
         <span class="md:block">project</span>
       </h2>
-      <p
-        id="recent-projects-sub-title"
-        class="text-sm inline-block -translate-x-full transition-translate- duration-2000 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
-      >
-        I'm a <span class="border-b-2">Vue developer</span>
-        <svg
-          class="inline-block"
-          viewBox="0 0 128 128"
-          width="35"
-          height="35"
-          data-v-7f316e73=""
-          ><path
-            fill="#42b883"
-            d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
-            data-v-7f316e73=""></path><path
-            fill="#35495e"
-            d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
-            data-v-7f316e73=""></path></svg
-        >
-      </p>
+
     </div>
     <div
       id="recent-project-1"
@@ -112,16 +93,12 @@ import simultaneousDataCompression from '../assets/simultaneous-data-compression
     const recentProjectsTitle = document.getElementById(
       'recent-projects-title'
     );
-    const recentProjectsSubtitle = document.getElementById(
-      'recent-projects-sub-title'
-    );
     const recentProject1 = document.getElementById('recent-project-1');
     const recentProject2 = document.getElementById('recent-project-2');
     const recentProject3 = document.getElementById('recent-project-3');
 
     const hiddenElements = [
       recentProjectsTitle,
-      recentProjectsSubtitle,
       recentProject1,
       recentProject2,
       recentProject3
@@ -131,13 +108,11 @@ import simultaneousDataCompression from '../assets/simultaneous-data-compression
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           recentProjectsTitle.classList.remove('-translate-x-full');
-          recentProjectsSubtitle.classList.remove('-translate-x-full');
           recentProject1.classList.remove('-translate-y-full');
           recentProject2.classList.remove('translate-x-full');
           recentProject3.classList.remove('translate-x-full');
         } else {
           recentProjectsTitle.classList.add('-translate-x-full');
-          recentProjectsSubtitle.classList.add('-translate-x-full');
           recentProject1.classList.add('-translate-y-full');
           recentProject2.classList.add('translate-x-full');
           recentProject3.classList.add('translate-x-full');
@@ -152,10 +127,6 @@ import simultaneousDataCompression from '../assets/simultaneous-data-compression
 </section>
 
 <style scoped>
-  .duration-2000 {
-    transition-duration: 2000ms;
-  }
-
   #recent-project-2,
   #recent-project-3 {
     overflow-x: hidden;

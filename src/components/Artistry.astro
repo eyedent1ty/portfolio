@@ -10,16 +10,35 @@ import artistry2 from '../assets/artistry-2.jpg';
     <div
       class="md:w-5/12 md:h-4/5 md:flex md:flex-col md:gap-y-8 lg:gap-y-12 xl:gap-y-16 2xl:gap-y-20"
     >
-      <img id="picture-left" class="-translate-x-full transition-transform ease-out duration-1000" src={artistry1.src} alt="Programming laptop on a desk" />
       <h2
         id="sub-heading"
         class="text-3xl uppercase mt-10 -translate-x-full transition-transform ease-out duration-1000 md:mt-0 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
       >
         <span class="block">The Art</span>That I Do
+        <p
+        id="artistry-sub-title"
+        class="text-sm inline-block -translate-x-full transition-translate- duration-1000 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+      >
+        I'm a <span class="border-b-2">Vue developer</span>
+        <svg
+          class="inline-block"
+          viewBox="0 0 128 128"
+          width="35"
+          height="35"
+          data-v-7f316e73=""
+          ><path
+            fill="#42b883"
+            d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+            data-v-7f316e73=""></path><path
+            fill="#35495e"
+            d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
+            data-v-7f316e73=""></path></svg
+        >
+      </p>
       </h2>
     </div>
 
-    <div class="h-full md:w-5/12 md:flex md:flex-col md:gap-y-10">
+    <div class="h-full md:w-5/12 md:flex md:flex-col md:justify-end md:gap-y-10">
       <p
         id="description"
         class="text-sm mb-10 translate-x-full transition-transform ease-out duration-1000 md:mb-10 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
@@ -29,38 +48,33 @@ import artistry2 from '../assets/artistry-2.jpg';
         principles, creating digital solutions that seamlessly marry innovation
         with reliability and user-friendly design.
       </p>
-      <img
-        id="picture-right"
-        class="max-w-60 mx-auto translate-x-full transition-transform ease-out duration-1000 sm:max-w-none sm:ml-auto sm:w-52 md:w-62 lg:w-72 xl:w-82 2xl:w-92"
-        src={artistry2.src}
-        alt="Programming laptop on a desk"
-      />
     </div>
   </main>
   <script>
     const subHeading = document.getElementById('sub-heading');
+    const artistrySubTitle = document.getElementById('artistry-sub-title')
     const description = document.getElementById('description');
-    const pictureRight = document.getElementById('picture-right');
-    const pictureLeft = document.getElementById('picture-left');
 
     const intersectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          subHeading.classList.remove('-translate-x-full');
-          description.classList.remove('translate-x-full');
-          pictureRight.classList.remove('translate-x-full');
-          pictureLeft.classList.remove('-translate-x-full');
-        } else {
-          subHeading.classList.add('-translate-x-full');
-          description.classList.add('translate-x-full');
-          pictureRight.classList.add('translate-x-full');
-          pictureLeft.classList.add('-translate-x-full');
+          entry.target.classList.remove('-translate-x-full');
 
+          if (entry.target.getAttribute('id') === 'description') {
+            entry.target.classList.remove('translate-x-full');
+          }
+
+        } else {
+          entry.target.classList.add('-translate-x-full');
+
+          if (entry.target.getAttribute('id') === 'description') {
+            entry.target.classList.add('translate-x-full')
+          }
         }
       });
     });
 
-    const hiddenElements = [subHeading, description];
+    const hiddenElements = [subHeading, artistrySubTitle, description];
 
     hiddenElements.forEach((hiddenElement) =>
       intersectionObserver.observe(hiddenElement)
@@ -69,6 +83,10 @@ import artistry2 from '../assets/artistry-2.jpg';
 </section>
 
 <style scoped>
+  .duration-2000 {
+    transition-duration: 2000ms;
+  }
+
   #artistry {
     overflow-x: hidden;
   }
