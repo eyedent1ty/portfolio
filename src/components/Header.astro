@@ -36,28 +36,27 @@ import myProfile from '../assets/my-profile.jpg';
     >
   </main>
   <script>
+    const header = document.getElementById('header');
     const myName = document.getElementById('my-name');
     const myRole = document.getElementById('my-role');
     const myVision = document.getElementById('my-vision');
     const myPicture = document.getElementById('my-picture');
 
     const intersectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          myName.classList.remove('-translate-x-40');
-          myRole.classList.remove('translate-x-40');
-          myVision.classList.remove('opacity-0', 'translate-y-18');
-          myVision.classList.add('translate-y-6', 'opacity-1');
-        } else {
-          myName.classList.add('-translate-x-40');
-          myRole.classList.add('translate-x-40');
-          myVision.classList.add('opacity-0', 'translate-y-18');
-          myVision.classList.remove('translate-y-6', 'opacity-1');
-        }
-      });
+      if (entries[0].isIntersecting) {
+        myName.classList.remove('-translate-x-40');
+        myRole.classList.remove('translate-x-40');
+        myVision.classList.remove('opacity-0', 'translate-y-18');
+        myVision.classList.add('translate-y-6', 'opacity-1');
+      } else {
+        myName.classList.add('-translate-x-40');
+        myRole.classList.add('translate-x-40');
+        myVision.classList.add('opacity-0', 'translate-y-18');
+        myVision.classList.remove('translate-y-6', 'opacity-1');
+      }
     });
 
-    const hiddenElements = [myName, myRole, myVision, myPicture];
+    const hiddenElements = [header];
     hiddenElements.forEach((hiddenElement) =>
       intersectionObserver.observe(hiddenElement)
     );
