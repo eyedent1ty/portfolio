@@ -1,4 +1,6 @@
 ---
+import roedLandingPage from '../assets/ro-ed-landing-page.png';
+import reminisce from '../assets/reminisce.png';
 import simultaneousDataCompression from '../assets/simultaneous-data-compression.png';
 import sunnyside from '../assets/sunnyside-landing-page.png';
 import clipboard from '../assets/clipboard-landing-page.png';
@@ -15,7 +17,7 @@ import adviceGenerator from '../assets/advice-generator.png';
     </h2>
 
     <section
-      class="text-sm sm:flex sm:flex-row sm:justify-center sm:gap-10 sm:px-20 sm:flex-wrap md:flex-nowrap md:justify-between"
+      class="flex flex-row flex-wrap justify-center text-sm sm:gap-10 sm:px-20"
     >
       <!-- <figure
         id="past-project-1"
@@ -60,8 +62,42 @@ import adviceGenerator from '../assets/advice-generator.png';
         </figcaption>
       </figure> -->
 
-      <!-- <div
-        id="recent-project-4"
+      <div
+        id="past-project-1"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={roedLandingPage.src} alt="Roed Landing Page" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-success text-white">Vue</div>
+            <div class="badge badge-primary text-white">Bootstrap</div>
+            <div class="badge badge-warning text-white">JavaScript</div>
+          </div>
+          <h2 class="card-title">
+            Landing Page for Ro-ed Logistics and Services
+          </h2>
+          <p>
+            Contributed to the creation of a user-friendly landing page aimed at
+            advertising our client&apos;s services.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="https://reminisce-eyedent1ty.netlify.app/" target="_blank">
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a href="https://github.com/eyedent1ty/reminisce" target="_blank">
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="past-project-2"
         class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
       >
         <figure class="sm:max-h-52">
@@ -82,18 +118,15 @@ import adviceGenerator from '../assets/advice-generator.png';
                 >See Live</button
               >
             </a>
-            <a
-              href="https://github.com/eyedent1ty/reminisce"
-              target="_blank"
-            >
+            <a href="https://github.com/eyedent1ty/reminisce" target="_blank">
               <button class="btn btn-outline">See Repository</button>
             </a>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div
-        id="past-project-1"
+        id="past-project-3"
         class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
       >
         <figure class="max-h-52">
@@ -116,11 +149,116 @@ import adviceGenerator from '../assets/advice-generator.png';
             speed in regards with the time and speed of both compression and
             decompression.
           </p>
+        </div>
+      </div>
+
+      <div
+        id="past-project-4"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={sunnyside.src} alt="Sunnyside agencly landing page" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-red-500 text-white">HTML</div>
+            <div class="badge bg-purple-950 text-white">CSS</div>
+            <div class="badge bg-warning text-white">JavaScript</div>
+          </div>
+          <h2 class="card-title">Sunnyside agencly landing page</h2>
+          <p>Developed a responsive landing page for sunnyside.</p>
           <div class="card-actions justify-end">
-            <button class="btn bg-base-content text-white hover:bg-base-content"
-              >See Live</button
+            <a
+              href="https://eyedent1ty-sunnyside-agency-landing-page.netlify.app/"
+              target="_blank"
             >
-            <button class="btn btn-outline">See Repository</button>
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/sunnyside-agency-landing-page"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="past-project-5"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={clipboard.src} alt="Clipboard landing page" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-red-500 text-white">HTML</div>
+            <div class="badge badge-secondary text-white">SCSS</div>
+          </div>
+          <h2 class="card-title">Sunnyside agencly landing page</h2>
+          <p>
+            Developed a responsive landing page for clipboard that seamlessly
+            adapts to various screen sizes and devices, ensuring an optimal user
+            experience.
+          </p>
+          <div class="card-actions justify-end">
+            <a
+              href="https://eyedent1ty-clipboard-landing-page.netlify.app/"
+              target="_blank"
+            >
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/clipboard-landing-page"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="past-project-6"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={adviceGenerator.src} alt="Clipboard landing page" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-red-500 text-white">HTML</div>
+            <div class="badge badge-secondary text-white">SCSS</div>
+            <div class="badge badge-warning text-white">JavaScript</div>
+          </div>
+          <h2 class="card-title">Advice Generator App</h2>
+          <p>
+            Developed a fully responsive quote generator that utlizes third
+            party REST API
+          </p>
+          <div class="card-actions justify-end">
+            <a
+              href="https://eyedent1ty-advice-generator-app.netlify.app/"
+              target="_blank"
+            >
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/advice-generator-app"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
           </div>
         </div>
       </div>
@@ -138,8 +276,20 @@ import adviceGenerator from '../assets/advice-generator.png';
 
     const pastProjectsTitle = document.getElementById('past-projects-title');
     const pastProject1 = document.getElementById('past-project-1');
+    const pastProject2 = document.getElementById('past-project-2');
+    const pastProject3 = document.getElementById('past-project-3');
+    const pastProject4 = document.getElementById('past-project-4');
+    const pastProject5 = document.getElementById('past-project-5');
+    const pastProject6 = document.getElementById('past-project-6');
 
-    const pastProjectsList = [pastProject1];
+    const pastProjectsList = [
+      pastProject1,
+      pastProject2,
+      pastProject3,
+      pastProject4,
+      pastProject5,
+      pastProject6
+    ];
 
     const intersectionObsever = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
