@@ -1,23 +1,25 @@
-<section id="experiences" class="px-5 py-4 h-screen">
+<section id="credentials" class="px-5 py-4 h-screen">
   <main class="space-y-6 h-full">
     <div class="sm:flex sm:flex-col sm:justify-around h-full">
       <h2
-        id="experiences-title"
-        class=" text-3xl uppercase mb-5 transition-transform ease-out duration-1000 sm:mb-0 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
+        id="credentials-title"
+        class="text-3xl uppercase mb-5 -translate-x-full transition-transform ease-out duration-1000 sm:mb-0 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:8xl"
       >
-        Work Experience
+        Educational Attainment
       </h2>
-      <ul class="timeline timeline-vertical lg:timeline-horizontal mx-auto">
+
+
+      <ul class="timeline timeline-vertical">
         <li>
           <hr />
-          <div class="timeline-end timeline-box">2024</div>
-          <div id="pixel8" class="timeline-start timeline-box">
+          <div class="timeline-start timeline-box">2020-2024</div>
+          <div id="college" class="timeline-box timeline-end">
             <p
               class="italic sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
             >
-              Pixel8 Web Solutions & Consultancy Inc.
+              Pamantasan ng Cabuyao (UC)
             </p>
-            <p>Frontend Developer Intern</p>
+            <p>BS Computer Science</p>
           </div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
@@ -26,14 +28,14 @@
         </li>
         <li>
           <hr />
-          <div class="timeline-start timeline-box">2021</div>
-          <div id="gleent" class="timeline-end timeline-box">
+          <div class="timeline-end timeline-box">2018-2020</div>
+          <div id="shs"  class="timeline-box timeline-start">
             <p
               class="italic sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
             >
-              Gleent Incorporated
+              Saint Benilde International School
             </p>
-            <p>Frontend Developer Intern</p>
+            <p>General Academic Strand (GAS)</p>
           </div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
@@ -42,14 +44,28 @@
         </li>
         <li>
           <hr />
-          <div class="timeline-end timeline-box">2020</div>
-          <div id="yazaki" class="timeline-start timeline-box">
+          <div class="timeline-start timeline-box">2014-2018</div>
+          <div id="jhs"  class="timeline-box timeline-end">
             <p
               class="italic sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
             >
-              Yazaki Torres Manufacturing Inc.
+              Calamba National High School Annex
             </p>
-            <p>Computer Programmer Intern</p>
+          </div>
+          <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+          </div>
+          <hr/>
+        </li>
+        <li>
+          <hr />
+          <div class="timeline-end timeline-box">2008-2014</div>
+          <div id="elementary"  class="timeline-box timeline-start">
+            <p
+              class="italic sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+            >
+              Banlic Elementary School
+            </p>
           </div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
@@ -61,10 +77,11 @@
   </main>
 
   <script>
-    const experiencesTitle = document.getElementById('experiences-title');
-    const pixel8 = document.getElementById('pixel8');
-    const gleent = document.getElementById('gleent');
-    const yazaki = document.getElementById('yazaki');
+    const credentialTitle = document.getElementById('credentials-title');
+    const college = document.getElementById('college');
+    const shs = document.getElementById('shs');
+    const jhs = document.getElementById('jhs');
+    const elementary = document.getElementById('elementary');
 
     const intersectinObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -77,7 +94,13 @@
       })
     });
 
-    const hiddenElements = [experiencesTitle, pixel8, gleent, yazaki];
+    const hiddenElements = [credentialTitle, college, shs, jhs, elementary];
     hiddenElements.forEach((hiddenElement) => intersectinObserver.observe(hiddenElement));
   </script>
 </section>
+
+<style scoped>
+  .my-picture {
+    max-height: 30rem;
+  }
+</style>
