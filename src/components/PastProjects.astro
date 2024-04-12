@@ -1,7 +1,4 @@
 ---
-import artistry1 from '../assets/artistry-1.jpg';
-import artistry2 from '../assets/artistry-2.jpg';
-
 import sunnyside from '../assets/sunnyside-landing-page.png';
 import clipboard from '../assets/clipboard-landing-page.png';
 import adviceGenerator from '../assets/advice-generator.png';
@@ -71,6 +68,9 @@ import adviceGenerator from '../assets/advice-generator.png';
     </p>
   </main>
   <script>
+
+    const pastProjects = document.getElementById('past-projects');
+
     const pastProjectsTitle = document.getElementById('past-projects-title');
     const pastProject1 = document.getElementById('past-project-1');
     const pastProject2 = document.getElementById('past-project-2');
@@ -84,9 +84,9 @@ import adviceGenerator from '../assets/advice-generator.png';
     ];
 
     const intersectionObsever = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          pastProjectsTitle.classList.remove('-translate-x-full');
+
+      if (entries[0].isIntersecting) {
+        pastProjectsTitle.classList.remove('-translate-x-full');
           pastProject1.classList.remove('-translate-x-full');
           pastProject1.classList.remove('opacity-0');
 
@@ -95,8 +95,8 @@ import adviceGenerator from '../assets/advice-generator.png';
 
           pastProject3.classList.remove('-translate-x-full');
           pastProject3.classList.remove('opacity-0');
-        } else {
-          pastProjectsTitle.classList.add('-translate-x-full');
+      } else {
+        pastProjectsTitle.classList.add('-translate-x-full');
           pastProject1.classList.add('-translate-x-full');
           pastProject1.classList.add('opacity-0');
 
@@ -105,13 +105,10 @@ import adviceGenerator from '../assets/advice-generator.png';
 
           pastProject3.classList.add('-translate-x-full');
           pastProject3.classList.add('opacity-0');
-        }
-      });
+      }
     });
 
-    hiddenElements.forEach((hiddenElement) =>
-      intersectionObsever.observe(hiddenElement)
-    );
+    intersectionObsever.observe(pastProjects);
   </script>
 </section>
 
