@@ -11,8 +11,8 @@
       >
         <span class="block">The Art</span>That I Do
         <p
-        id="artistry-sub-title"
-        class="mt-5 text-sm inline-block -translate-x-full transition-translate- duration-1000 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+        id="profession"
+        class="mt-5 text-sm inline-block -translate-x-full sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
       >
         I'm a <span class="border-b-2">Vue developer</span>
         <svg
@@ -82,34 +82,25 @@
     </div>
   </main>
   <script>
+    const artistry = document.getElementById('artistry');
+
     const subHeading = document.getElementById('sub-heading');
-    const artistrySubTitle = document.getElementById('artistry-sub-title')
+    const profession = document.getElementById('profession');
     const description = document.getElementById('description');
 
     const intersectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('-translate-x-full');
-
-          if (entry.target.getAttribute('id') === 'description') {
-            entry.target.classList.remove('translate-x-full');
-          }
-
-        } else {
-          entry.target.classList.add('-translate-x-full');
-
-          if (entry.target.getAttribute('id') === 'description') {
-            entry.target.classList.add('translate-x-full')
-          }
-        }
-      });
+      if (entries[0].isIntersecting) {
+        subHeading.classList.remove('-translate-x-full');
+        profession.classList.remove('-translate-x-full');
+        description.classList.remove('translate-x-full');
+      } else {
+        subHeading.classList.add('-translate-x-full');
+        profession.classList.add('-translate-x-full');
+        description.classList.add('translate-x-full');
+      }
     });
 
-    const hiddenElements = [subHeading, artistrySubTitle, description];
-
-    hiddenElements.forEach((hiddenElement) =>
-      intersectionObserver.observe(hiddenElement)
-    );
+    intersectionObserver.observe(artistry);
   </script>
 </section>
 
