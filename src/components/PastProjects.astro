@@ -1,4 +1,5 @@
 ---
+import simultaneousDataCompression from '../assets/simultaneous-data-compression.png';
 import sunnyside from '../assets/sunnyside-landing-page.png';
 import clipboard from '../assets/clipboard-landing-page.png';
 import adviceGenerator from '../assets/advice-generator.png';
@@ -16,7 +17,7 @@ import adviceGenerator from '../assets/advice-generator.png';
     <section
       class="text-sm sm:flex sm:flex-row sm:justify-center sm:gap-10 sm:px-20 sm:flex-wrap md:flex-nowrap md:justify-between"
     >
-      <figure
+      <!-- <figure
         id="past-project-1"
         class="space-y-4 opacity-0 -translate-x-full transition-translate duration-1000 sm:w-5/12 lg:w-auto"
       >
@@ -57,7 +58,72 @@ import adviceGenerator from '../assets/advice-generator.png';
           adapts to various screen sizes and devices, ensuring an optimal user
           experience.
         </figcaption>
-      </figure>
+      </figure> -->
+
+      <!-- <div
+        id="recent-project-4"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={reminisce.src} alt="Reminisce" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-green-400 text-white">Nuxt</div>
+            <div class="badge badge-info text-white">Tailwind</div>
+            <div class="badge badge-warning text-white">JavaScript</div>
+          </div>
+          <h2 class="card-title">Reminisce</h2>
+          <p>A memory game built on the web</p>
+          <div class="card-actions justify-end">
+            <a href="https://reminisce-eyedent1ty.netlify.app/" target="_blank">
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/reminisce"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div> -->
+
+      <div
+        id="past-project-1"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="max-h-52">
+          <img
+            src={simultaneousDataCompression.src}
+            alt="Simultaneous Data Compression for Fastering Encoding and Decoding using Huffman Algorithm"
+          />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-blue-400 text-white">VB.Net</div>
+          </div>
+          <h2 class="card-title">
+            Simultaneous Data Compression for faster encoding and decoding using
+            Huffman Algorithm
+          </h2>
+          <p>
+            Contributed in the development of a user-friendly data compression
+            system that provides efficient compression ratio and compression
+            speed in regards with the time and speed of both compression and
+            decompression.
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn bg-base-content text-white hover:bg-base-content"
+              >See Live</button
+            >
+            <button class="btn btn-outline">See Repository</button>
+          </div>
+        </div>
+      </div>
     </section>
     <p class="italic text-center pt-10">
       To view more of my projects, see my <a
@@ -72,37 +138,22 @@ import adviceGenerator from '../assets/advice-generator.png';
 
     const pastProjectsTitle = document.getElementById('past-projects-title');
     const pastProject1 = document.getElementById('past-project-1');
-    const pastProject2 = document.getElementById('past-project-2');
-    const pastProject3 = document.getElementById('past-project-3');
 
-    const hiddenElements = [
-      pastProjectsTitle,
-      pastProject1,
-      pastProject2,
-      pastProject3
-    ];
+    const pastProjectsList = [pastProject1];
 
     const intersectionObsever = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         pastProjectsTitle.classList.remove('-translate-x-full');
-        pastProject1.classList.remove('-translate-x-full');
-        pastProject1.classList.remove('opacity-0');
-
-        pastProject2.classList.remove('-translate-x-full');
-        pastProject2.classList.remove('opacity-0');
-
-        pastProject3.classList.remove('-translate-x-full');
-        pastProject3.classList.remove('opacity-0');
+        pastProjectsList.forEach((pastProject) => {
+          pastProject.classList.remove('-translate-x-full');
+          pastProject.classList.remove('opacity-0');
+        });
       } else {
         pastProjectsTitle.classList.add('-translate-x-full');
-        pastProject1.classList.add('-translate-x-full');
-        pastProject1.classList.add('opacity-0');
-
-        pastProject2.classList.add('-translate-x-full');
-        pastProject2.classList.add('opacity-0');
-
-        pastProject3.classList.add('-translate-x-full');
-        pastProject3.classList.add('opacity-0');
+        pastProjectsList.forEach((pastProject) => {
+          pastProject.classList.add('-translate-x-full');
+          pastProject.classList.add('opacity-0');
+        });
       }
     });
 
