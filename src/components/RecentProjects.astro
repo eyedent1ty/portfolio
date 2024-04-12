@@ -1,13 +1,9 @@
 ---
-import artistry1 from '../assets/artistry-1.jpg';
-import artistry2 from '../assets/artistry-2.jpg';
-
-import sunnyside from '../assets/sunnyside-landing-page.png';
-import clipboard from '../assets/clipboard-landing-page.png';
-import adviceGenerator from '../assets/advice-generator.png';
-
 import kaelExpress from '../assets/kael-express.png';
 import roedManagementSystem from '../assets/roed-management-system.png';
+import socialConnect from '../assets/social-connect.png';
+import websitePortfolio from '../assets/website-portfolio.png';
+import reminisce from '../assets/reminisce.png';
 import simultaneousDataCompression from '../assets/simultaneous-data-compression.png';
 ---
 
@@ -21,103 +17,246 @@ import simultaneousDataCompression from '../assets/simultaneous-data-compression
     </h2>
 
     <section
-      class="text-sm sm:flex sm:flex-row sm:justify-center sm:gap-10 sm:px-20 sm:flex-wrap md:flex-nowrap md:justify-between"
+      class="flex flex-row flex-wrap justify-center text-sm sm:gap-10 sm:px-20"
     >
-      <figure
+      <div
         id="recent-project-1"
-        class="flex-1 space-y-4 opacity-0 -translate-x-full transition-translate duration-1000 sm:w-5/12  mb-12  lg:w-auto"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
       >
-        <figcaption class="text-center italic">
-          Kael Express (E-commerce site)
-        </figcaption>
-        <div class="image-container relative">
-          <img src={kaelExpress.src} />
-          <div class="overlay absolute transition-all opacity-30 ">
-            <p class="absolute top-0 text-red-50">Hello</p>
+        <figure class="sm:max-h-52">
+          <img
+            src={socialConnect.src}
+            alt="Simultaneous Data Compression for Fastering Encoding and Decoding using Huffman Algorithm"
+          />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-green-400 text-white">Nuxt</div>
+            <div class="badge badge-success text-white">Vuetify</div>
+            <div class="badge badge-warning text-white">Pinia</div>
+            <div class="badge badge-info text-white">Typescript</div>
+            <div class="badge bg-green-950 text-white">Supabase</div>
+            <div class="badge bg-blue-950 text-white">Prisma</div>
+            <div class="badge bg-blue-800 text-white">PostgreSQL</div>
+          </div>
+          <h2 class="card-title">
+            Social Connect <span class="badge badge-warning text-white"
+              >Under development</span
+            >
+          </h2>
+          <p>
+            Developing a fully responsive ultimate platform that connects
+            designers and developers, encouraging collaboration and teamwork.
+            Whether the user is an experienced professional or a young enthusiast,
+            Social Connect will help its users discover the best creatives around the
+            internet.
+          </p>
+          <div class="card-actions justify-end">
+            <a
+              href="https://github.com/eyedent1ty/social-connect"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
           </div>
         </div>
-        <figcaption
-          class="text-center sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
-        >
-          Developed a fully responsive e-commerce platform that harnesses the power of the internet to provide users with an effortless online buying experience.
-        </figcaption>
-      </figure>
+      </div>
 
-      <figure
+      <div
         id="recent-project-2"
-        class="flex-1 space-y-4 opacity-0 -translate-x-full transition-translate duration-1000 sm:w-5/12 mb-12 lg:w-auto"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
       >
-        <figcaption class="text-center italic">
-          Trucking Management System for Ro-Ed Logistics and Services
-        </figcaption>
-        <img src={roedManagementSystem.src} />
-        <figcaption
-          class="text-center sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
-        >
-          Developed a user-friendly management system that can manage and secure
-          trip and travel informaion efficiently.
-        </figcaption>
-      </figure>
-      <figure
+        <figure class="sm:max-h-52">
+          <img src={kaelExpress.src} alt="Kael Express (E-Commerce)" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-green-400 text-white">Nuxt</div>
+            <div class="badge badge-success text-white">Vuetify</div>
+            <div class="badge badge-warning text-white">Pinia</div>
+            <div class="badge badge-info text-white">Typescript</div>
+            <div class="badge bg-green-950 text-white">Supabase</div>
+            <div class="badge bg-blue-950 text-white">Prisma</div>
+            <div class="badge bg-blue-800 text-white">PostgreSQL</div>
+          </div>
+          <h2 class="card-title">Kael Express (E-commerce site)</h2>
+          <p>
+            Developed a fully responsive e-commerce platform that harnesses the
+            power of the internet to provide users with an effortless online
+            buying experience.
+          </p>
+          <div class="card-actions justify-end">
+            <a href="https://kael-express.netlify.app" target="_blank">
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/kael-express"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
         id="recent-project-3"
-        class="flex-1 space-y-4 opacity-0 -translate-x-full transition-translate duration-1000 sm:w-5/12  mb-12  lg:w-auto"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
       >
-        <figcaption class="text-center italic">
-          Simultaneous Data Compression for faster encoding and decoding using
-          Huffman Algorithm
-        </figcaption>
-        <img src={simultaneousDataCompression.src} />
-        <figcaption
-          class="text-center sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
-        >
-          Contributed in the development of a user-friendly data compression
+        <figure class="sm:max-h-52">
+          <img
+            src={roedManagementSystem.src}
+            alt="A cloud-based trucking management system for Ro-ed Logistics and Services"
+          />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge badge-success text-white">Vue</div>
+            <div class="badge badge-secondary text-white">Sass</div>
+            <div class="badge badge-primary text-white">Bootstrap</div>
+            <div class="badge badge-success text-white">Node.js</div>
+            <div class="badge text-black">Express.js</div>
+            <div class="badge badge-primary text-white">SQlite</div>
+          </div>
+          <h2 class="card-title">
+            Trucking Management System for Ro-ed Logistics and Services
+          </h2>
+          <p>
+            Developed a user-friendly management system that can manage and
+            secure trip and travel informaion efficiently.
+          </p>
+          <div class="card-actions justify-end">
+            <a
+              href="https://github.com/Jolayus/softeng-group-10"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="recent-project-4"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={websitePortfolio.src} alt="Website Portfolio" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-orange-500 text-white">Astro.js</div>
+            <div class="badge badge-info text-white">TailwindCSS</div>
+            <div class="badge bg-amber-300 text-white">daisyUI</div>
+          </div>
+          <h2 class="card-title">Website Portfolio</h2>
+          <p>Developed a responsive online portfolio to exhibit my ideas, skills, and projects, with the goal of securing a position within organizations where I can contribute and grow. This platform, with its straightforward and compelling designs, offers a glimpse into my expertise across various domains , employing cutting-edge technologies to demonstrate my commitment to excellence.</p>
+          <div class="card-actions justify-end">
+            <a href="https://github.com/eyedent1ty/portfolio" target="_blank">
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div
+        id="recent-project-4"
+        class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000"
+      >
+        <figure class="sm:max-h-52">
+          <img src={reminisce.src} alt="Reminisce" />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge bg-green-400 text-white">Nuxt</div>
+            <div class="badge badge-info text-white">Tailwind</div>
+            <div class="badge badge-warning text-white">JavaScript</div>
+          </div>
+          <h2 class="card-title">Reminisce</h2>
+          <p>A memory game built on the web</p>
+          <div class="card-actions justify-end">
+            <a href="https://reminisce-eyedent1ty.netlify.app/" target="_blank">
+              <button
+                class="btn bg-base-content text-white hover:bg-base-content"
+                >See Live</button
+              >
+            </a>
+            <a
+              href="https://github.com/eyedent1ty/reminisce"
+              target="_blank"
+            >
+              <button class="btn btn-outline">See Repository</button>
+            </a>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div id="recent-project-3" class="card w-full min-w-96 sm:w-96 bg-base-100 shadow-xl opacity-0 -translate-x-full transition-translate duration-1000">
+        <figure class="max-h-52">
+          <img
+            src={simultaneousDataCompression.src}
+            alt="Simultaneous Data Compression for Fastering Encoding and Decoding using Huffman Algorithm"
+          />
+        </figure>
+        <div class="card-body">
+          <div class="flex flex-wrap gap-2">
+            <div class="badge  bg-blue-400 text-white">VB.Net</div>
+          </div>
+          <h2 class="card-title">
+            Simultaneous Data Compression for faster encoding and decoding using
+            Huffman Algorithm
+          </h2>
+          <p>
+            Contributed in the development of a user-friendly data compression
           system that provides efficient compression ratio and compression speed
           in regards with the time and speed of both compression and
           decompression.
-        </figcaption>
-      </figure>
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn bg-base-content text-white hover:bg-base-content">See Live</button>
+            <button class="btn btn-outline">See Repository</button>
+          </div>
+        </div>
+      </div> -->
     </section>
   </main>
   <script>
     const recentProjects = document.getElementById('recent-projects');
-    const recentProjectsTitle = document.getElementById('recent-projects-title');
+    const recentProjectsTitle = document.getElementById(
+      'recent-projects-title'
+    );
     const recentProject1 = document.getElementById('recent-project-1');
     const recentProject2 = document.getElementById('recent-project-2');
     const recentProject3 = document.getElementById('recent-project-3');
+    const recentProject4 = document.getElementById('recent-project-4');
 
-    const hiddenElements = [
-      recentProjects
+    const recentProjectsList = [
+      recentProject1,
+      recentProject2,
+      recentProject3,
+      recentProject4
     ];
 
     const intersectionObsever = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          recentProjectsTitle.classList.remove('-translate-x-full');
-          recentProject1.classList.remove('-translate-x-full');
-          recentProject1.classList.remove('opacity-0');
-
-          recentProject2.classList.remove('-translate-x-full');
-          recentProject2.classList.remove('opacity-0');
-
-          recentProject3.classList.remove('-translate-x-full');
-          recentProject3.classList.remove('opacity-0');
-        } else {
-          recentProjectsTitle.classList.add('-translate-x-full');
-          recentProject1.classList.add('-translate-x-full');
-          recentProject1.classList.add('opacity-0');
-
-          recentProject2.classList.add('-translate-x-full');
-          recentProject2.classList.add('opacity-0');
-
-          recentProject3.classList.add('-translate-x-full');
-          recentProject3.classList.add('opacity-0');
-        }
-      });
+      if (entries[0].isIntersecting) {
+        recentProjectsTitle.classList.remove('-translate-x-full');
+        recentProjectsList.forEach((recentProject) => {
+          recentProject.classList.remove('-translate-x-full');
+          recentProject.classList.remove('opacity-0');
+        });
+      } else {
+        recentProjectsTitle.classList.add('-translate-x-full');
+        recentProjectsList.forEach((recentProject) => {
+          recentProject.classList.add('-translate-x-full');
+          recentProject.classList.add('opacity-0');
+        });
+      }
     });
 
-    hiddenElements.forEach((hiddenElement) =>
-      intersectionObsever.observe(hiddenElement)
-    );
+    intersectionObsever.observe(recentProjects);
   </script>
 </section>
 

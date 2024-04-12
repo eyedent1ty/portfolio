@@ -68,7 +68,6 @@ import adviceGenerator from '../assets/advice-generator.png';
     </p>
   </main>
   <script>
-
     const pastProjects = document.getElementById('past-projects');
 
     const pastProjectsTitle = document.getElementById('past-projects-title');
@@ -84,27 +83,26 @@ import adviceGenerator from '../assets/advice-generator.png';
     ];
 
     const intersectionObsever = new IntersectionObserver((entries) => {
-
       if (entries[0].isIntersecting) {
         pastProjectsTitle.classList.remove('-translate-x-full');
-          pastProject1.classList.remove('-translate-x-full');
-          pastProject1.classList.remove('opacity-0');
+        pastProject1.classList.remove('-translate-x-full');
+        pastProject1.classList.remove('opacity-0');
 
-          pastProject2.classList.remove('-translate-x-full');
-          pastProject2.classList.remove('opacity-0');
+        pastProject2.classList.remove('-translate-x-full');
+        pastProject2.classList.remove('opacity-0');
 
-          pastProject3.classList.remove('-translate-x-full');
-          pastProject3.classList.remove('opacity-0');
+        pastProject3.classList.remove('-translate-x-full');
+        pastProject3.classList.remove('opacity-0');
       } else {
         pastProjectsTitle.classList.add('-translate-x-full');
-          pastProject1.classList.add('-translate-x-full');
-          pastProject1.classList.add('opacity-0');
+        pastProject1.classList.add('-translate-x-full');
+        pastProject1.classList.add('opacity-0');
 
-          pastProject2.classList.add('-translate-x-full');
-          pastProject2.classList.add('opacity-0');
+        pastProject2.classList.add('-translate-x-full');
+        pastProject2.classList.add('opacity-0');
 
-          pastProject3.classList.add('-translate-x-full');
-          pastProject3.classList.add('opacity-0');
+        pastProject3.classList.add('-translate-x-full');
+        pastProject3.classList.add('opacity-0');
       }
     });
 
